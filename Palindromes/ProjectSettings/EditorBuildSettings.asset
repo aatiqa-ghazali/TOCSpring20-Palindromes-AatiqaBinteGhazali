@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Aatiqa5A.unity
+    guid: 3bd77d0c80da4cc4ab605dfb7d1105ae
   m_configObjects: {}
