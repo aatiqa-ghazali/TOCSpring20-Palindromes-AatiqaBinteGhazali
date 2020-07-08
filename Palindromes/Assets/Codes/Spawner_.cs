@@ -68,18 +68,18 @@ public class Spawner_ : MonoBehaviour
         }
     }
     //we have to generate the random number between 9 and 15 so in the function the integare size have a random no between 9 to 15
-    private string RandomString(int size)
+    private string RandomString(int limit)
     {
         //my string
         string my_name = "xa1";
         //char abc= _chars[Random.Range(0, 3)];
         //Debug.Log(abc);
         //an array of characters is created 
-        char[] place = new char[size];
+        char[] place = new char[limit];
         //here we are foricng the random no function to generate the random number from x or a or 1  and it will do it for the number of times between 9 to 15 then make an array of these number with in the range of 9 to 15 and return it as a string and wew will get a zero number a the top it will show that string whihc is not surely a palindrome upon the cube as text
 
         int i;
-        for (i = 0; i < size; i++)
+        for (i = 0; i < limit; i++)
         {
             //let say 0 is generated and in the array of _chars  x is at the first location so in te array  x will go 
             place[i] = my_name[Random.Range(0, 3)];
@@ -89,32 +89,32 @@ public class Spawner_ : MonoBehaviour
         return new string(place);
     }
     //the case when we got a random number 1 or 2 
-    public string randpalindrom(int size)
+    public string randpalindrom(int args)
     {
-        char[] place_palindrome = new char[size];
-        place_palindrome[0] = 'a';
-        place_palindrome[size - 1] = 'a';
+        char[] place_palindrome = new char[args];
+        place_palindrome[0] = 'x';
+        place_palindrome[args - 1] = 'x';
         //in 2 blocks of array x is add endis no of  blocks left to fill
-        int end = size - 2;
-        int i = 1;
-        for (i = 1; i < size; i++)
+        int back= args - 2;
+        
+        for (int i = 1; i < args; i++)
         {
             int decide = Random.Range(0, 2);
-            if (decide == 1)
+            if (decide == 0)
             {
-                place_palindrome[i] = 'x';
-                place_palindrome[end] = 'x';
+                place_palindrome[i] = 'a';
+                place_palindrome[back] = 'a';
             }
-            else if (decide == 2)
+            else 
             {
                 place_palindrome[i] = '1';
-                place_palindrome[end] = '1';
+                place_palindrome[back] = '1';
 
             }
             //one block is filled again now end will be decremented
-            end--;
+            back--;
             //array is filled
-            if (end <= i)
+            if (back <= i)
             {
                 break;
             }
